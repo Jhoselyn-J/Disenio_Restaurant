@@ -1,0 +1,172 @@
+body {
+    background-image: url('images/pollito.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ED8900;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul.navbar li {
+    float: left;
+}
+
+ul.navbar li a {
+    display: block;
+    color:#3A160A;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+ul.navbar li a:hover {
+    background-color:#E34B00;
+}
+
+.superpuesto {
+    position: absolute;
+    top: 50%;
+    left: 300px; /* Ajusta el valor según la posición deseada */
+    transform: translate(-50%, -50%);
+    background-color: #E1B83A;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+ul.navbar li:first-child img {
+    width: 80px; 
+    height: auto; 
+}
+.boton{padding: 10px 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #E34B00;
+    color: white;
+    cursor: pointer;
+    color: #f4eaea;
+    
+}
+ul.navbar li.search-form {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+ul.navbar li.search-form input[type="text"] {
+    padding: 10px 60px;
+    border-radius: 4px;
+    border: none;
+}
+
+ul.navbar li.search-form button {
+    padding: 10px 10px;
+    border-radius: 4px;
+    border: none;
+    background-color: #E34B00;
+    color: white;
+    cursor: pointer;
+}
+
+ul.navbar li.search-form button:hover {
+    background-color: #a06645;
+} 
+
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 20px;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #555;
+}
+
+
+footer {
+    background-color: rgba(242, 242, 242, 0.1);
+    padding: 7px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: large;
+    
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 20px;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #555;
+}
+
+.carousel-container {
+    position: absolute;
+    bottom: 0;
+    right: 0; 
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.carousel {
+    width: 500px;
+    margin: 0;
+    overflow: hidden;
+    
+
+.carousel-inner {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    height: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    
+}
+

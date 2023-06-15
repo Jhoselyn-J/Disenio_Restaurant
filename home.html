@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="https://kit.fontawesome.com/04559347fe.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="#"><img src="images/logitoo.png" alt="Logo"></a></li>
+        <li><a href="#">Acerca de Nosotros <i class="fa-solid fa-address-card"></i></a></li>
+        <li><a href="#">Inicio<i class="fa-solid fa-house"></i></a></li>
+        <li><a href="#">Productos<i class="fa-solid fa-drumstick-bite"></i></a></li>
+        <li><a href="#">Contacto<i class="fa-solid fa-phone-volume"></i></a></li>
+        <li><a href="#">Pedido<i class="fas fa-shopping-cart"></i> </a></li>
+
+        <li class="search-form">
+            <input type="text" placeholder="Buscar">
+            <button type="submit">Buscar<i class="fa-solid fa-magnifying-glass"></i></button>
+            </li>
+        </ul>
+    <div class="superpuesto">
+        <h1>Golden Rooster</h1>
+        <p>"El pollo dorado que te hace brillar"</p>
+        <button class="boton">Productos<i class="fa-solid fa-turkey"></i></button>
+    </div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="images/i1.jpg" alt="Slide 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/i2.jpg" alt="Slide 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/i3.jpg" alt="Slide 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/i4.jpg" alt="Slide 3">
+                </div>
+            </div>
+        </div>
+        <button id="prevBtn"><i class="fa-solid fa-angle-left"></i></button>
+        <button id="nextBtn"><i class="fa-solid fa-angle-right"></i></button>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>© 2023 Mi Empresa. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+    </footer>
+    <script>
+        const carousel = document.querySelector('.carousel');
+        const carouselInner = document.querySelector('.carousel-inner');
+        const prevBtn = document.querySelector('#prevBtn');
+        const nextBtn = document.querySelector('#nextBtn');
+    
+        let currentIndex = 0;
+        const slides = Array.from(carouselInner.children);
+    
+        function Slide(index) {
+            carouselInner.style.transform = `translateX(-${index * carousel.clientWidth}px)`;
+        }
+    
+        function prevSlide() {
+            currentIndex--;
+            if (currentIndex < 0) {
+                currentIndex = slides.length - 1;
+            }
+            Slide(currentIndex);
+        }
+    
+        function nextSlide() {
+            currentIndex++;
+            if (currentIndex === slides.length) {
+                currentIndex = 0;
+            }
+            Slide(currentIndex);
+        }
+    
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+    </script>
+</body>
+</html>
